@@ -1,0 +1,39 @@
+@use './variable';
+
+@mixin default-text{
+    font-size: 16px;
+    font-family: variable.$body-font;
+    line-height: 26px;
+    color: variable.$body-text-color;
+}
+
+@mixin d-flex-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin column-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@mixin default-btn{
+    padding: 16px 20px;
+    background-color: variable.$btn-primary;
+    display: inline-block;
+    font-family: variable.$body-font;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    border: 1px solid variable.$btn-primary;
+    border-radius: 8px;
+    color: variable.$text-white;
+    text-transform: capitalize;
+    transition: 0.5s all;
+    &:hover{
+        background-color: variable.$white-bg-btn;
+        color: variable.$btn-primary;
+    }
+}
